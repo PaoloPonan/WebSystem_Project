@@ -1,0 +1,146 @@
+/* =====================================================
+   Hardware Inventory Management System - Custom Theme
+   Connected to Laboratory Exercise 4 Color Scheme
+   ===================================================== */
+
+:root {
+    /* Primary brand colors - Hardware / Construction theme */
+    --primary: #1e3a5f;          /* Deep navy blue */
+    --primary-dark: #0f2440;
+    --primary-light: #2c5282;
+    --secondary: #e67e22;        /* Construction orange */
+    --secondary-dark: #d35400;
+    --accent: #27ae60;           /* Success green */
+    --warning: #f39c12;
+    --danger: #c0392b;
+    --light-bg: #f4f6f9;
+    --card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Override Bootstrap primary */
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+.text-primary {
+    color: var(--primary) !important;
+}
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Secondary (orange) accents */
+.btn-secondary,
+.bg-secondary {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+}
+.text-warning {
+    color: var(--warning) !important;
+}
+
+/* Body & layout */
+body {
+    background-color: var(--light-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+
+/* Navbar branding */
+.navbar-brand {
+    letter-spacing: 0.5px;
+}
+.navbar .nav-link.active {
+    font-weight: 600;
+    border-bottom: 2px solid var(--secondary);
+}
+
+/* Stat cards */
+.stat-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tables */
+.table thead th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+.table-warning {
+    --bs-table-bg: #fff8e6;
+}
+.table-danger {
+    --bs-table-bg: #fdecea;
+}
+
+/* Cards */
+.card {
+    border-radius: 0.5rem;
+}
+.card-header {
+    font-weight: 600;
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+/* Forms */
+.form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 95, 0.25);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .stat-card h2 {
+        font-size: 1.5rem;
+    }
+}
